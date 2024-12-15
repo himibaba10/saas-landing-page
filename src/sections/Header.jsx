@@ -44,8 +44,10 @@ const Header = () => {
 
         {/* Nav Links */}
         <div
-          className={`w-full max-lg:fixed max-lg:top-0 max-lg:left-0 max-lg:w-full max-lg:bg-s2 max-lg:opacity-${
-            isOpen ? "100" : "0 max-lg:pointer-events-none"
+          className={`w-full max-lg:fixed max-lg:top-0 max-lg:left-0 max-lg:w-full max-lg:bg-s2 ${
+            isOpen
+              ? "max-lg:opacity-100"
+              : "max-lg:opacity-0 max-lg:pointer-events-none"
           }`}
         >
           <div className="max-lg:relative max-lg:flex max-lg:flex-col max-lg:min-h-screen max-lg:p-6 max-lg:overflow-hidden sidebar-before max-md:px-4">
