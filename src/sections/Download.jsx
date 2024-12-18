@@ -28,7 +28,7 @@ const Download = () => {
                 flavor, we&apos;ve got you covered.
               </p>
 
-              <ul className="flex flex-wrap items-center gap-6">
+              <ul className="flex flex-wrap items-center gap-3 sm:gap-6">
                 {links.map(({ id, url, icon }) => (
                   <li
                     key={id}
@@ -36,7 +36,7 @@ const Download = () => {
                   >
                     <a
                       href={url}
-                      className="size-22 download_tech-icon_before relative flex items-center justify-center border-2 rounded-half border-s3 bg-s1 transition-borderColor duration-500"
+                      className="size-16 sm:size-22 download_tech-icon_before relative flex items-center justify-center border-2 rounded-half border-s3 bg-s1 transition-borderColor duration-500"
                     >
                       <span className="absolute -top-2 rotate-90">
                         <Marker />
@@ -46,7 +46,9 @@ const Download = () => {
                         alt="lines"
                         className="absolute size-13/20 object-contain"
                       />
-                      <span className="download_tech-icon">{icon}</span>
+                      <span className="download_tech-icon max-md:w-2/5">
+                        {icon}
+                      </span>
                     </a>
                   </li>
                 ))}
